@@ -29,7 +29,7 @@ token = config.get("default","auth-token")
 
 # get deployment details
 headers = {'Authorization': token}
-r = requests.get(f"{url}/llm/api/deployments/{param1}", headers=headers, verify=False)
+r = requests.get(f"{url}/llm/api/deployments/{param1}",params={"namespace": "pranayraj-mangala"}, headers=headers, verify=False)
 deployment = r.json()['deployment']
 
 # get serving details
